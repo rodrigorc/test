@@ -25,6 +25,7 @@ plugins:
   - jekyll-sitemap
 
 # Build settings
+remote_theme: yous/whiteglass
 markdown: kramdown
 excerpt_separator: "<!-- more -->"
 
