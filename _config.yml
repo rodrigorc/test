@@ -14,40 +14,35 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Test
+author: Rodrigo Rivas Costa
 email: rodrigorivascosta@gmail.com
-description: Awesome blog.
+description: Awesome blog
 
 # Build settings
 markdown: kramdown
-remote_theme: yous/whiteglass
+excerpt_separator: "<!-- more -->"
 
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+permalink: /:year/:month/:day/:title/
+paginate_path: /posts/:num/
+paginate: 5
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+# Markdown settings
+kramdown:
+  auto_ids: false
+  enable_coderay: false
+  entity_output: as_char
+  footnote_nr: 1
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: 1..6
 
-author:
-  name: Yo
+# jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: category_archives
+  permalinks:
+    category: /categories/:name/
+tag: /tags/:name/
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
