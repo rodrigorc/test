@@ -18,6 +18,12 @@ author: Rodrigo Rivas Costa
 email: rodrigorivascosta@gmail.com
 description: Awesome blog
 
+# Plugins
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
 excerpt_separator: "<!-- more -->"
@@ -44,5 +50,5 @@ jekyll-archives:
   layout: category_archives
   permalinks:
     category: /categories/:name/
-tag: /tags/:name/
+    tag: /tags/:name/
 
