@@ -19,8 +19,7 @@ description: Awesome blog.
 
 # Build settings
 markdown: kramdown
-#remote_theme: yous/whiteglass
-theme: jekyll-whiteglass
+remote_theme: yous/whiteglass
 
 # Outputting
 permalink: /:categories/:title/
